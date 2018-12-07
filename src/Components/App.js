@@ -4,6 +4,7 @@ import $ from "jquery";
 import Nav from "./Nav";
 import Signup from "./Signup";
 import Login from "./Login";
+import Home from "./Home";
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
         <div className="layout">
           {currentPage === "signup" && <Signup />}
           {currentPage === "login" && <Login />}
+          {currentPage === "home" && <Home />}
         </div>
       </div>
     );
