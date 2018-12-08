@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "react-dev": "webpack-dev-server --hot --config ./webpack.config.js --mode development",
+    "react-dev": "webpack --watch --hot --config ./webpack.config.js --mode development",
     "server-dev": "nodemon server/index.js",
     "test": "echo \"No test specified\" && exit 0"
   },
@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
@@ -26,6 +27,7 @@
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
+    "path": "^0.12.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   }

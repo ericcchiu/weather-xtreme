@@ -4,7 +4,11 @@ import $ from "jquery";
 class Signup extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      name: "",
+      email: "",
+      password: ""
+    };
   }
 
   render() {
@@ -18,7 +22,7 @@ class Signup extends Component {
         <input type="text" placeholder="Enter Your Name..." />
         <input type="text" placeholder="Enter Your Email Address..." />
         <input type="password" placeholder="Enter Your Password..." />
-        <button>Signup</button>
+        <button onClick={this.handleSignup}>Signup</button>
       </div>
     );
   }
