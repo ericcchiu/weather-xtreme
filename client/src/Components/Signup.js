@@ -9,6 +9,19 @@ class Signup extends Component {
       email: "",
       password: ""
     };
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event, name) {
+    const newState = { ...this.state };
+    console.log(newState);
+    newState[name] = event.target.value;
+
+    this.setState(newState);
+  }
+
+  handleSignup() {
+
   }
 
   render() {
@@ -19,9 +32,20 @@ class Signup extends Component {
     return (
       <div className="main-form">
         <h2>Signup</h2>
-        <input type="text" placeholder="Enter Your Name..." />
-        <input type="text" placeholder="Enter Your Email Address..." />
-        <input type="password" placeholder="Enter Your Password..." />
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter Your Name..."
+          onChange={(event) => this.handleInputChange(event, 'name')} />
+        <input type="text"
+          name="email"
+          placeholder="Enter Your Email Address..."
+          onChange={(event) => this.handleInputChange(event, 'email')} />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter Your Password..."
+          onChange={(event) => this.handleInputChange(event, 'password')} />
         <button onClick={this.handleSignup}>Signup</button>
       </div>
     );
